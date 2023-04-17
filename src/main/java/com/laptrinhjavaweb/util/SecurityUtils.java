@@ -9,7 +9,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import com.laptrinhjavaweb.dto.MyUser;
 
 public class SecurityUtils {
-	
+	// duy trì data user khi user đăng nhập vào hệ thống bằng cách lưu vào đối tượng Principal của security
 	public static MyUser getPrincipal() {
 		MyUser myUser = (MyUser) (SecurityContextHolder.getContext()).getAuthentication().getPrincipal();
         return myUser;

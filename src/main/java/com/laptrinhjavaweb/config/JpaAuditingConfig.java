@@ -16,7 +16,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 public class JpaAuditingConfig { 
 	// class nay de config nhung annotation 
 	// @CreatedDate, @LastModifiedDate, @CreatedBy, @LastModifiedBy trong cac entity
-	
+	// Lưu ý phải add thư viên spring aspects version cùng với spring framework
 	@Bean
 	public AuditorAware<String> auditorProvider() {
 		return new AuditorAwareImpl();
